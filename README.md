@@ -41,11 +41,13 @@ git clone https://github.com/FaiziCodeSpace/job-board.git
 cd job-board
 ```
 2. Install dependencies:
+```
 npm install
-
+```
 4. Run the server:
+```
 node server.js
-
+```
 Visit in your browser:
 http://localhost:3000
 
