@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/jobBoardstyle.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hey! <%=username%></h1>
+      <h1>WELCOME TO OUR JOB BOARD</h1>
+      <form method="POST" action="/createJob">
+        <input type="text" placeholder="JOB TYPE" name="topic" /><br />
+        <textarea name="desription" placeholder="Desription"></textarea><br />
+        <input type="text" placeholder="Salary" name="salary" /><br />
+        <input type="text" placeholder="Date" name="date" /><br />
+        <button type="submit">POST JOB</button>
+      </form>
+
+      <ul class="job-list">
+  <% jobs.forEach(u => { %>
+    <li class="job-card">
+      <h2 class="job-title">Topic: <%= u.topic %></h2>
+      <p class="job-desc">Description: <%= u.desription %></p>
+      <p class="job-salary">Salary: <%= u.salary %></p>
+      <p class="job-date">Date: <%= u.date %></p>
+    </li>
+  <% }) %>
+</ul>
+
+    </div>
+  </body>
+</html>
